@@ -1,0 +1,32 @@
+PACKAGES
+npm i express mongoose jsonwebtoken bcrypt nodemon dotenv
+--------------------------------------------------------------------
+package.json ->
+                  "type": "module",
+--------------------------------------------------------------------
+mongoose.connect()  =>  connecting to db
+mongoose.Schema()  =>  creating schema
+mongoose.model()  =>  creating collection
+--------------------------------------------------------------------
+userModel.create()  => addUser 
+userModel.find()  =>  showUsers
+userModel.findByIdAndDelete()  =>  deleteUser
+--------------------------------------------------------------------
+POST  (give body)
+http://localhost:8080/api/users/addUser
+--------------------------------------------------------------------
+GET  (copy id)
+http://localhost:8080/api/users/showUsers
+--------------------------------------------------------------------
+DELETE  (paste id -> url)
+http://localhost:8080/api/users/deleteUser/699d3b7274761687eb3db47f
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
+
+
+--------------------------------------------------------------------
