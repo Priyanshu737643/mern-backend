@@ -1,5 +1,7 @@
 import jwt from "jsonwebtoken";
 const SECRET = "hello123";
+
+// authenticate
 const authenticate = (req, res, next) => {
   const authHeader = req.headers.authorization;
   const token = authHeader.split(" ")[1];
@@ -13,6 +15,7 @@ const authenticate = (req, res, next) => {
   }
 };
 
+// authorize
 const authorize = (...roles) => {
   return (req, res, next) => {
     if (roles.includes(req.user.role)) {
