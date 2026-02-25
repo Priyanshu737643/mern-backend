@@ -9,10 +9,18 @@ const showProducts = async (req, res) => {
   const result = await productModel.find();
   res.json(result);
 };
+
+const updateProduct = async (req, res) => {
+  const id = req.params.id;
+  const product = req.body;
+  const result = await productModel.findByIdAndUpdate(id, product);
+  res.status(200).json(product);
+}
+
 const deleteProduct = async (req, res) => {
   const id = req.params.id;
   const result = await productModel.findByIdAndDelete(id);
   res.json(result);
 };
 
-export { addProduct, showProducts, deleteProduct };
+export { addProduct, showProducts, deleteProduct, updateProduct };
